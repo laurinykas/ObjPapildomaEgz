@@ -7,14 +7,27 @@ int main() {
 
 
     readFile(wordMap,urls);
-    int choice = consoleOrFile();
-    if( choice == 1){
-
-        outputToConsole(wordMap,urls);
+    int choice1 = substringOrFull();
+    int choice2 = consoleOrFile();
+    if( choice1 == 1){
+        if(choice2 == 1 ){
+            searchSubstringToConsole(inputSubstring(),wordMap);
+        }
+        else{
+            searchSubstringToFile(inputSubstring(),wordMap);
+            //
+        }
     }
     else{
+        if(choice2 == 1 ){
 
-        outputToFile(wordMap,urls);
+            outputToConsole(wordMap,urls);
+        }
+        else{
+
+            outputToFile(wordMap,urls);
+        }
+
 
     }
 
